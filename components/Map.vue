@@ -129,7 +129,7 @@ const initCharts = () => {
           show: true,
           color: "#fff",
           formatter(value: any) {
-            return value.data.value[2]
+            return value.data?.value?.[2] || 0
           }
         },
         itemStyle: {

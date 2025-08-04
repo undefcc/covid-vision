@@ -61,7 +61,7 @@ const data = ref({
 		}]
 	}
 }) // await useAsyncData('post', () => $fetch(`https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=statisGradeCityDetail,diseaseh5Shelf`))
-const res = data.value['data']
+const res = data.value?.data || {}
 
 // update
 chinaDetail = res.diseaseh5Shelf
