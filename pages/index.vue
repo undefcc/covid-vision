@@ -28,7 +28,39 @@ useHead({
 let { diseaseh5Shelf: chinaDetail, statisGradeCityDetail: cityDetail } = useCovData()
 
 // api
-const { data } = await useAsyncData('post', () => $fetch(`https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=statisGradeCityDetail,diseaseh5Shelf`))
+const data = ref({
+	"ret": 0,
+	"info": "",
+	"data": {
+		"statisGradeCityDetail": [{
+			"city": "长宁",
+			"nowConfirm": 802,
+			"heal": 1574,
+			"date": "05/05",
+			"sdate": "05/05",
+			"syear": 2022,
+			"province": "上海",
+			"confirmAdd": 5,
+			"confirm": 2376,
+			"dead": 0,
+			"grade": "点击查看详情",
+			"mtime": "2022-05-05 08:41:46"
+		}, {
+			"city": "浦东",
+			"heal": 14648,
+			"mtime": "2022-05-05 08:44:51",
+			"sdate": "05/05",
+			"province": "上海",
+			"nowConfirm": 2143,
+			"confirmAdd": 50,
+			"confirm": 16792,
+			"dead": 1,
+			"grade": "点击查看详情",
+			"date": "05/05",
+			"syear": 2022
+		}]
+	}
+}) // await useAsyncData('post', () => $fetch(`https://api.inews.qq.com/newsqa/v1/query/inner/publish/modules/list?modules=statisGradeCityDetail,diseaseh5Shelf`))
 const res = data.value['data']
 
 // update

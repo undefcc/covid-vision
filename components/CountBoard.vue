@@ -2,33 +2,33 @@
   <div class="count-board">
     <div class="number">
       <section>
-        <div>今日+ {{ chinaDetail.chinaAdd.localConfirmH5 }}</div>
-        <div>{{ chinaDetail.chinaTotal.localConfirm }}</div>
+        <div>今日+ {{ chinaDetail?.chinaAdd.localConfirmH5 || 0 }}</div>
+        <div>{{ chinaDetail?.chinaTotal.localConfirm || 0 }}</div>
         <div>本土现有确诊</div>
       </section>
       <section>
-        <div>今日+ {{ chinaDetail.chinaAdd.nowConfirm }}</div>
-        <div>{{ chinaDetail.chinaTotal.nowConfirm }}</div>
+        <div>今日+ {{ chinaDetail?.chinaAdd.nowConfirm || 0 }}</div>
+        <div>{{ chinaDetail?.chinaTotal.nowConfirm || 0 }}</div>
         <div>现有确诊</div>
       </section>
       <section>
-        <div>今日+ {{ chinaDetail.chinaAdd.confirm }}</div>
-        <div>{{ chinaDetail.chinaTotal.confirm }}</div>
+        <div>今日+ {{ chinaDetail?.chinaAdd.confirm || 0 }}</div>
+        <div>{{ chinaDetail?.chinaTotal.confirm || 0 }}</div>
         <div>累计确诊</div>
       </section>
       <section>
-        <div>今日+ {{ chinaDetail.chinaAdd.noInfect }}</div>
-        <div>{{ chinaDetail.chinaTotal.noInfect }}</div>
+        <div>今日+ {{ chinaDetail?.chinaAdd.noInfect || 0 }}</div>
+        <div>{{ chinaDetail?.chinaTotal.noInfect || 0 }}</div>
         <div>无症状感染者</div>
       </section>
       <section>
-        <div>今日+ {{ chinaDetail.chinaAdd.importedCase }}</div>
-        <div>{{ chinaDetail.chinaTotal.importedCase }}</div>
+        <div>今日+ {{ chinaDetail?.chinaAdd.importedCase || 0 }}</div>
+        <div>{{ chinaDetail?.chinaTotal.importedCase || 0 }}</div>
         <div>境外输入</div>
       </section>
       <section>
-        <div>今日+ {{ chinaDetail.chinaAdd.dead }}</div>
-        <div>{{ chinaDetail.chinaTotal.dead }}</div>
+        <div>今日+ {{ chinaDetail?.chinaAdd.dead || 0 }}</div>
+        <div>{{ chinaDetail?.chinaTotal.dead || 0 }}</div>
         <div>累计死亡</div>
       </section>
     </div>
